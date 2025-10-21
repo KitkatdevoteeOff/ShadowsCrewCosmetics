@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ShadowsCrewCosmetics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ShadowsCrewCosmetics</h1>
+        <nav>
+            <button onclick="showSection('shop')">Cosmétiques</button>
+            <button onclick="showSection('coins')">Coins</button>
+            <button onclick="showSection('promo')">Codes Promo</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Connexion</h2>
+            <input type="text" id="username" placeholder="Pseudo Minecraft">
+            <button onclick="login()">Se connecter</button>
+        </section>
+
+        <section id="shop" style="display:none">
+            <h2>Cosmétiques disponibles</h2>
+            <div id="cosmetics-list"></div>
+        </section>
+
+        <section id="coins" style="display:none">
+            <h2>Mes Coins</h2>
+            <p id="coins-count"></p>
+            <p id="hours-played"></p>
+        </section>
+
+        <section id="promo" style="display:none">
+            <h2>Codes Promo</h2>
+            <input type="text" id="promo-input" placeholder="Entrez un code promo">
+            <button onclick="applyPromo()">Valider</button>
+            <p id="promo-result"></p>
+        </section>
+    </main>
+
+    <script src="data/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
